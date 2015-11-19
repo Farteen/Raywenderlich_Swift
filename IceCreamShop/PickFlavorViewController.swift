@@ -13,13 +13,19 @@ import MBProgressHUD
 public class PickFlavorViewController: UIViewController, UICollectionViewDelegate {
   
   // MARK: Instance Variables
+  // MARK: 对数据初始化,否则需要提供一个初始化方法
   
+  private var dataSource: PickFlavorDataSource? {
+    return collectionView?.dataSource as! PickFlavorDataSource?
+  }
+
   var flavors: [Flavor] = [] {
     
     didSet {
       pickFlavorDataSource?.flavors = flavors
     }
   }
+  
   
   private var pickFlavorDataSource: PickFlavorDataSource? {
     return collectionView?.dataSource as! PickFlavorDataSource?
@@ -39,6 +45,10 @@ public class PickFlavorViewController: UIViewController, UICollectionViewDelegat
   public override func viewDidLoad() {
     
     super.viewDidLoad()
+    ///隐式解可选如果该值为nil,那么再次调用会runttime error :fatal error: unexpectedly found nil while unwrapping an Optional value
+    ///这样设计有他自身的优势,1.内存管理2.明确逻辑
+    self.contentView = nil
+    self.contentView.frame = CGRectMake(1.0, 1.0, 1.0, 1.0)
     loadFlavors()
   }
   
