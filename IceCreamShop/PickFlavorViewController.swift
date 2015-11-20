@@ -46,9 +46,10 @@ public class PickFlavorViewController: UIViewController, UICollectionViewDelegat
     
     super.viewDidLoad()
     ///隐式解可选如果该值为nil,那么再次调用会runttime error :fatal error: unexpectedly found nil while unwrapping an Optional value
-    ///这样设计有他自身的优势,1.内存管理2.明确逻辑
-    self.contentView = nil
-    self.contentView.frame = CGRectMake(1.0, 1.0, 1.0, 1.0)
+    ///这样设计有他自身的优势,1.内存管理2.明确逻辑3.比optional解包书写更方便
+//    self.contentView = nil
+//    self.contentView.frame = CGRectMake(1.0, 1.0, 1.0, 1.0)
+    ///如果是自身方法可以省略self
     loadFlavors()
   }
   

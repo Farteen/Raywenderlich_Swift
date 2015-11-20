@@ -1,13 +1,103 @@
 PODS:
   - Alamofire (3.1.2)
-  - MBProgressHUD (0.9.1)
+  - AsyncDisplayKit (1.2.3):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.2.3)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.2.3)
+  - BFKit-Swift (1.5.1)
+  - CHTCollectionViewWaterfallLayout (0.9.2)
+  - DLog (1.0.3)
+  - DOUAudioStreamer (0.2.11)
+  - FDFullscreenPopGesture (1.1)
+  - iCarousel (1.8.2)
+  - INTULocationManager (4.1.1)
+  - iOS-Category (1.0.5)
+  - KVOController (1.0.3)
+  - Mantle (2.0.5):
+    - Mantle/extobjc (= 2.0.5)
+  - Mantle/extobjc (2.0.5)
+  - MLScreenshot (1.0.3)
+  - PKHUD (2.2.5)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SAMTextField (0.1.2)
+  - SAMTextView (0.2.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SIAlertView (1.3)
+  - SnapKit (0.16.0)
+  - SQLite.swift (1.0.0)
+  - SSKeychain (1.2.3)
+  - SVProgressHUD (1.1.3)
+  - SVPullToRefresh (0.4.1)
+  - TPKeyboardAvoiding (1.2.10)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.1.2)
-  - MBProgressHUD
+  - Alamofire (~> 3.1.1)
+  - AsyncDisplayKit (~> 1.2.3)
+  - BFKit-Swift
+  - CHTCollectionViewWaterfallLayout
+  - DLog (~> 1.0.3)
+  - DOUAudioStreamer (~> 0.2.11)
+  - FDFullscreenPopGesture (= 1.1)
+  - iCarousel (~> 1.8.2)
+  - INTULocationManager
+  - iOS-Category (~> 1.0.5)
+  - KVOController (~> 1.0.3)
+  - Mantle (~> 2.0.5)
+  - MLScreenshot (~> 1.0.3)
+  - PKHUD
+  - ReactiveCocoa (~> 2.5)
+  - SAMTextField (~> 0.1.2)
+  - SAMTextView (~> 0.2.2)
+  - SDWebImage (~> 3.7.3)
+  - SIAlertView (~> 1.3)
+  - SnapKit (~> 0.16.0)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - SSKeychain (~> 1.2.3)
+  - SVProgressHUD (~> 1.1.3)
+  - SVPullToRefresh (~> 0.4.1)
+  - TPKeyboardAvoiding (~> 1.2.6)
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: 76b231595257410c2c4cd90a5b138190cf25920c
+    :git: https://github.com/stephencelis/SQLite.swift.git
 
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  AsyncDisplayKit: 5c8f38225f7478e39c48196cec0dd0d2ac3455ed
+  BFKit-Swift: c69d3ad0054e2f07f0118d2620b7b442b1e3b25b
+  CHTCollectionViewWaterfallLayout: 43232febcb3e4d3985cd758718cbe499b21b822f
+  DLog: 018da00ce5382610b0b441505380febc92aa67c0
+  DOUAudioStreamer: 8aefc3e80eb6c01ec89fa3c30743c660e8c55bae
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
+  INTULocationManager: 83c7373048d583cda57e25eefb9bb8a3675acf16
+  iOS-Category: 295d0eb4cc2b937a0fa47effab4f30c48d121869
+  KVOController: 9fd8f0343670994e4b6f9f0b31f5a45663f3e1cf
+  Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
+  MLScreenshot: 09b476048a115b1f34a2e7347bb8d473b62682bd
+  PKHUD: 15d9db01fb008bb9247c6d785c585f587955b113
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SAMTextField: a0f4eb5b48b45aef56453c265262b45154bc3e2a
+  SAMTextView: 979c43bb1fa5859ddfbfeb35e9c296a2b0ec55fd
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
+  SnapKit: ddac6b339d571f9d80dbb733585b172ee9eed3cb
+  SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
+  SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  TPKeyboardAvoiding: 614ebec846ec28b83d548769297fa5fb56468904
 
 COCOAPODS: 0.39.0
