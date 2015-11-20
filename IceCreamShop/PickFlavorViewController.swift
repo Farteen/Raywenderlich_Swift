@@ -72,10 +72,17 @@ public class PickFlavorViewController: UIViewController, UICollectionViewDelegat
 //      
 //    }
     let signal = RACSignal.createSignal { (subscriber: RACSubscriber!) -> RACDisposable! in
-      return RACDisposable.init(block: { () -> Void in
-          Alamofire.request(.GET, "http://www.raywenderlich.com/downloads/Flavors.plist", parameters: nil, encoding: .PropertyList(.XMLFormat_v1_0, 0), headers: nil).responsePropertyList(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-            subscriber.sendNext(response as! AnyObject)
-        })
+      let request = Alamofire.request(.GET, "http://www.raywenderlich.com/downloads/Flavors.plist", parameters: nil, encoding: .PropertyList(.XMLFormat_v1_0, 0), headers: nil).responsePropertyList(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+        if response.result.isSuccess {
+          subscriber.sendNext(response.result.value!)
+        }
+        if response.result.isFailure {
+          subscriber.sendError(response.result.error!)
+        }
+        subscriber.sendCompleted()
+      })
+      return RACDisposable(block: {() -> Void in
+        request.cancel()
       })
     }
     signal.subscribeNext { (x: AnyObject!) -> Void in

@@ -4,10 +4,10 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'IceCreamShop' do
+pod 'Alamofire', '~> 3.1.2'
 pod 'ReactiveCocoa', '~> 2.5'
 pod "PKHUD"
 pod 'KVOController', '~> 1.0.3'
-pod 'Alamofire', '~> 3.1.1'
 pod 'SnapKit', '~> 0.16.0'
 pod 'Mantle', '~> 2.0.5'
 pod 'SQLite.swift',git: 'https://github.com/stephencelis/SQLite.swift.git'
