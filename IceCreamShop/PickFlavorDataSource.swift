@@ -16,6 +16,7 @@ class PickFlavorDataSource: NSObject, UICollectionViewDataSource {
     static let ScoopCell = "ScoopCell"
   }
   
+  
   // MARK: Instance Variables
   
   var flavors = [Flavor]() {

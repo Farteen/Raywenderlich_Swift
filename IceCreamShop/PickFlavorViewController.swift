@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
+import ReactiveCocoa
 
 public class PickFlavorViewController: UIViewController, UICollectionViewDelegate {
   
@@ -66,22 +67,30 @@ public class PickFlavorViewController: UIViewController, UICollectionViewDelegat
 //    }
     showLoadingHUD()
     
-    Alamofire.request(.GET, "http://www.raywenderlich.com/downloads/Flavors.plist", parameters: nil, encoding: .PropertyList(.XMLFormat_v1_0, 0), headers: nil).responsePropertyList {[weak self] (response : Response<AnyObject,NSError>) -> Void in
-      
-      guard let strongSelf = self else {
-        return
-      }
-      var flavorsArray: [[String : String]]? = nil
-      if response.result.isSuccess {
-        if let array = response.result.value as? [[String : String]] {
-          flavorsArray = array
-        }
-      }
-      strongSelf.hideHUD()
-      strongSelf.flavors = strongSelf.flavorFactory.flavorsFromDictionaryArray(flavorsArray!)
-      strongSelf.collectionView.reloadData()
-      strongSelf.selectFirstFlavor()
+//    let signal = UITextField(frame: CGRectZero).rac_textSignal()
+//    signal.subscribeNext { (x: AnyObject!) -> Void in
+//      
+//    }
+    let signal = RACSignal.createSignal { (subscriber: RACSubscriber!) -> RACDisposable! in
+      return RACDisposable.init(block: { () -> Void in
+          Alamofire.request(.GET, "http://www.raywenderlich.com/downloads/Flavors.plist", parameters: nil, encoding: .PropertyList(.XMLFormat_v1_0, 0), headers: nil).responsePropertyList(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+            subscriber.sendNext(response as! AnyObject)
+        })
+      })
     }
+    signal.subscribeNext { (x: AnyObject!) -> Void in
+      print(x)
+    }
+
+//     let signal = RACSignal.createSignal {[weak self] (subscriber: RACSubscriber!) -> RACDisposable! in
+//      
+//        Alamofire.request(.GET, "http://www.raywenderlich.com/downloads/Flavors.plist", parameters: nil, encoding: .PropertyList(.XMLFormat_v1_0, 0), headers: nil).responsePropertyList {[weak subscriber] (response : Response<AnyObject,NSError>) -> Void in
+//          subscriber?.sendNext(response as! AnyObject)
+//        }
+//     }
+//      signal.subscribeNext{[weak self] (x: AnyObject) -> Void in
+//
+//      }
   }
   
   private func showLoadingHUD() {

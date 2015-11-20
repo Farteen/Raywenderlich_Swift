@@ -21,6 +21,7 @@
 		42B433FB1A89ECFB0091170B /* FlavorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B433FA1A89ECFB0091170B /* FlavorFactory.swift */; };
 		42C970621A8C9CAF002FEFF3 /* RGBAColorFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C970611A8C9CAF002FEFF3 /* RGBAColorFromString.swift */; };
 		A27188CB425B2A3BB12D2258 /* Pods_IceCreamShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F9EB90513D16F5D6857F28 /* Pods_IceCreamShop.framework */; };
+		CE5607D71BFEC4310095C9BD /* FarTeen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5607D61BFEC4310095C9BD /* FarTeen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		42C970611A8C9CAF002FEFF3 /* RGBAColorFromString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAColorFromString.swift; sourceTree = "<group>"; };
 		938AF2156D20AA94A95E533F /* Pods-IceCreamShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop.release.xcconfig"; sourceTree = "<group>"; };
 		C4F9EB90513D16F5D6857F28 /* Pods_IceCreamShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5607D61BFEC4310095C9BD /* FarTeen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarTeen.swift; sourceTree = "<group>"; };
 		EA68C74CA045BF0ED01200E8 /* Pods-IceCreamShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				42801B541A881DF600DEB026 /* AppDelegate.swift */,
 				4274BF201A88371900937936 /* PickFlavorDataSource.swift */,
 				42801B561A881DF600DEB026 /* PickFlavorViewController.swift */,
+				CE5607D61BFEC4310095C9BD /* FarTeen.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				42801B571A881DF600DEB026 /* PickFlavorViewController.swift in Sources */,
 				42801B551A881DF600DEB026 /* AppDelegate.swift in Sources */,
 				4274BF1C1A88274600937936 /* Flavor.swift in Sources */,
+				CE5607D71BFEC4310095C9BD /* FarTeen.swift in Sources */,
 				4274BF231A88518B00937936 /* ScoopCell.swift in Sources */,
 				42B433FB1A89ECFB0091170B /* FlavorFactory.swift in Sources */,
 				42801B781A881E5500DEB026 /* IceCreamView.swift in Sources */,
