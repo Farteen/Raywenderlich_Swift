@@ -31,7 +31,11 @@ class IceCreamView: UIView {
   private let coneLaticeColor = RGB(235, green: 183, blue: 131)
   
   // MARK: View Lifecycle
+  /*!
+  Description
   
+  - parameter frame: frame description
+  */
   override func drawRect(frame: CGRect) {
 
     //// General Declarations

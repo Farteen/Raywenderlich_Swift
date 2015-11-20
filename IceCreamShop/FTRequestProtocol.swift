@@ -17,7 +17,8 @@ protocol FTRequestProtocol {
   var requestAPIPath: String! { get }
   // MARK:请求方法
   var requestMethod: Alamofire.Method { get }
-  var requestSerializer: Alamofire.
+  // MAKR:请求encodingType
+  var requestEncodingType: Alamofire.ParameterEncoding { get }
   // MARK:请求header
   var requestHeaders: [String : String]? { get }
   // MARK:请求参数 如果是GET则会拼接到URL,如果是POST则会根据encoding来做处理放到请求体
